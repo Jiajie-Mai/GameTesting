@@ -8,7 +8,7 @@ Thinger3 (Don't ask what happened to Thinger and Thinger2)
 
 JJ -- 2018-10-22
 --------------------------------------------------------------
-* Created Thinger3 that I made sometime ago
-* Created devlog
+Created Thinger3 that I made sometime ago
+Created devlog
 
 ==============================================================

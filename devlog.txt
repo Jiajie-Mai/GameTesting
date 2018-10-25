@@ -12,3 +12,10 @@ Created Thinger3 that I made sometime ago
 Created devlog
 
 ==============================================================
+JJ == 2018-10-24 21:26
+--------------------------------------------------------------
+Flushed out the Item class
+Added 3 fields to the stat list and added speed
+Worked with privatizing things
+Added Fight class
+==============================================================

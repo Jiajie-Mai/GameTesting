@@ -14,7 +14,7 @@ public class Protagonist extends Character{
     //gives items and coins to the target
     public void get(Character target){
         for (Item i: target.inventory){
-            System.out.println("Obtained " + i.name + "!");
+            System.out.println("Obtained " + i + "!");
             inventory.add(i);
         }
         coin += target.coin;

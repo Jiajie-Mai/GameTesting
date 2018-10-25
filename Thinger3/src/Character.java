@@ -38,7 +38,7 @@ public class Character {
         hp[0] = (int) Math.pow(level[2],1.8) + 10 * level[2] + 9;
         def[0] = (int) Math.pow(level[2],1.15) + 2;
         res[0] = (int) Math.pow(level[2],1.15) + 2;
-        spd[0] = 10 + (int) 2.4 * level[3];
+        spd[0] = 10 + (int) 2.4 * level[2];
         name = inputName;
         level[2] = inputLevel;
         itemEquiped = false;

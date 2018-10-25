@@ -22,6 +22,7 @@ public class Main {
         enemy.reset(true);
         you.attack(enemy);
 
+        //why me pee pee hard
     }
 
 }

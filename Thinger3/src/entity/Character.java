@@ -18,13 +18,18 @@ public class Character {
 
     //index 0 is your normal stat
     //index 1 is current stat
-    public int[] atk = new int[2];
-    public int[] mag = new int[2];
+    //index 2 is stat from items
+    public int[] atk = new int[3];
+    public int[] mag = new int[3];
     //mana is multiplied by 5 while hp is multiplied by 2
-    public int[] mana = new int[2];
-    public int[] hp = new int[2];
-    public int[] def = new int[2];
-    public int[] res = new int[2];
+    public int[] mana = new int[3];
+    public int[] hp = new int[3];
+    public int[] def = new int[3];
+    public int[] res = new int[3];
+    //used to calculate turns
+    public int[] spd = new int[3];
+
+    private boolean itemEquiped;
 
     public Character(String inputName,int inputLevel){
         atk[0] = (int) Math.pow(level[2],1.4) + 5;
@@ -33,9 +38,10 @@ public class Character {
         hp[0] = (int) Math.pow(level[2],1.8) + 10 * level[2] + 9;
         def[0] = (int) Math.pow(level[2],1.15) + 2;
         res[0] = (int) Math.pow(level[2],1.15) + 2;
+        spd[0] = 10 + (int) 2.4 * level[2];
         name = inputName;
         level[2] = inputLevel;
-
+        itemEquiped = false;
     }
 
     //uses attack to decrease health, if def is higher than atk, do random attack from 1% of their hp
@@ -83,15 +89,15 @@ public class Character {
         }
     }
 
-    //used in the beginning of the fight
-    public void equipItemStat(){
+    //used in when equipping stats from items
+    public void itemStat(){
         for (Item i: inventory){
-            atk[1] += i.atk;
-            mag[1] += i.mag;
-            mana[1] += i.mana;
-            hp[1] += i.hp;
-            res[1] += i.res;
-            def[1] += i.def;
+            atk[2] += i.getAtk();
+            mag[2] += i.getMag();
+            mana[2] += i.getMana();
+            hp[2] += i.getHp();
+            res[2] += i.getRes();
+            def[2] += i.getDef();
         }
     }
 

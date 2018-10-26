@@ -1,3 +1,6 @@
+import entity.Character;
+import entity.Protagonist;
+
 /**
  * Created by JJ on 10/21/2018.
  */

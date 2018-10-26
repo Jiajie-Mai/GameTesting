@@ -1,4 +1,7 @@
+package entity;
+
 import entity.Character;
+import inventory.Item;
 
 /**
  * Created by JJ on 10/21/2018.

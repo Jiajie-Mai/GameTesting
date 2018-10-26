@@ -1,3 +1,7 @@
+package combat;
+
+import entity.Character;
+
 /**
  * Created by JJ on 10/24/2018.
  */

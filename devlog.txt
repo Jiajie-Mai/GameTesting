@@ -19,3 +19,9 @@ Added 3 fields to the stat list and added speed
 Worked with privatizing things
 Added Fight class
 ==============================================================
+
+Lucrum -- 2018-10-25 9:34
+--------------------------------------------------------------
+Moved Protagonist and Character class into entity package
+Moved Fight into combat package
+Moved Item into inventory package

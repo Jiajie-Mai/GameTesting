@@ -26,6 +26,7 @@ Moved Protagonist and Character class into entity package
 Moved Fight into combat package
 Moved Item into inventory package
 Protected variables in Character
+===============================================================
 
 Lucrum -- 2018-10-26 9:15
 ---------------------------------------------------------------

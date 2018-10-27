@@ -1,3 +1,5 @@
+package inventory;
+
 /**
  * Created by JJ on 10/21/2018.
  */

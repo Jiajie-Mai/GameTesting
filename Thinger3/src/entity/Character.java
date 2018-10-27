@@ -33,7 +33,7 @@ public class Character {
     //used to calculate turns
     protected int[] spd = new int[3];
 
-    private boolean itemEquiped;
+    private boolean itemEquipped;
 
     public Character(String inputName,int inputLevel){
         atk[0] = (int) Math.pow(level[2],1.4) + 5;
@@ -45,7 +45,7 @@ public class Character {
         spd[0] = 10 + (int) 2.4 * level[2];
         name = inputName;
         level[2] = inputLevel;
-        itemEquiped = false;
+        itemEquipped = false;
     }
 
     //uses attack to decrease health, if def is higher than atk, do random attack from 1% of their hp
@@ -105,4 +105,99 @@ public class Character {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int[] getLevel() {
+        return level;
+    }
+
+    public void setLevel(int[] level) {
+        this.level = level;
+    }
+
+    public int getCoin() {
+        return coin;
+    }
+
+    public void setCoin(int coin) {
+        this.coin = coin;
+    }
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
+
+    public int[] getAtk() {
+        return atk;
+    }
+
+    public void setAtk(int[] atk) {
+        this.atk = atk;
+    }
+
+    public int[] getMag() {
+        return mag;
+    }
+
+    public void setMag(int[] mag) {
+        this.mag = mag;
+    }
+
+    public int[] getMana() {
+        return mana;
+    }
+
+    public void setMana(int[] mana) {
+        this.mana = mana;
+    }
+
+    public int[] getHp() {
+        return hp;
+    }
+
+    public void setHp(int[] hp) {
+        this.hp = hp;
+    }
+
+    public int[] getDef() {
+        return def;
+    }
+
+    public void setDef(int[] def) {
+        this.def = def;
+    }
+
+    public int[] getRes() {
+        return res;
+    }
+
+    public void setRes(int[] res) {
+        this.res = res;
+    }
+
+    public int[] getSpd() {
+        return spd;
+    }
+
+    public void setSpd(int[] spd) {
+        this.spd = spd;
+    }
+
+    public boolean isItemEquipped() {
+        return itemEquipped;
+    }
+
+    public void setItemEquipped(boolean itemEquipped) {
+        this.itemEquipped = itemEquipped;
+    }
 }

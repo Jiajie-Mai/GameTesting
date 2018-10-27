@@ -1,18 +1,120 @@
 package entity;
 
-import entity.Character;
 import inventory.Item;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
 
 /**
  * Created by JJ on 10/21/2018.
  */
 public class Protagonist extends Character {
 
+    Scanner sc = new Scanner(System.in);
     String classType;
+    String userInput;
+    String name;
+    String race;
+    String[] raceList = {"Elf", "Human", "Dwarf", "Amalian"};
+    boolean check;
 
     public Protagonist(String nameInput,String classInput){
         super(nameInput,1);
         classType = classInput;
+    }
+
+    public Character createProtag(){
+
+        name = getUserName();
+        setRace();
+
+
+        //TODO replace classInput fighter field at some point
+        Protagonist protag = new Protagonist(name, "fighter");
+        return protag;
+
+    }
+
+    private String getUserName(){
+        System.out.println("What's your name?");
+        name = sc.next();
+
+        //this part re-does the name fetch in case the user makes a mistake
+        if(confirm(name, "name")){
+            return name;
+        }
+        else{
+            getUserName();
+        }
+        return null;
+    }
+
+    public String setRace(){
+
+        System.out.println("Please choose a race:");
+        for(int i=0; i < 4; i++){
+            System.out.println("\n" + raceList[i]);
+        }
+
+        userInput = sc.next().toLowerCase();
+
+        //checks through valid races
+        //TODO make this more efficient with contains()
+        switch(userInput){
+            case "human":
+            case "h":
+                break;
+
+            case "elven":
+            case "e":
+                break;
+
+            case "dwarf":
+            case "d":
+                break;
+
+            case "amalian":
+            case "a":
+                break;
+
+            default:
+                System.out.println("Invalid race");
+                setRace();
+        }
+
+        confirm(userInput, "race");
+
+        return race;
+    }
+
+    //TODO make this work, currently does next to nothing.
+    public boolean confirm(String answer, String type){
+
+        switch(type){
+            case "race":
+
+                //TODO find a way to swap out a for an when the race starts with a vowel
+                System.out.println("You're a " + answer + "?");
+
+            case "name":
+                System.out.println("You're called " + answer + ", right?");
+        }
+
+        switch(sc.next().toLowerCase()){
+            case "yes":
+            case "y":
+                check = true;
+
+            case "no":
+            case "n":
+                check = false;
+
+            default:
+                check = false;
+        }
+
+
+        return check;
     }
 
     //gives items and coins to the target

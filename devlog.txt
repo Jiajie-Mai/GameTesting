@@ -32,3 +32,4 @@ Lucrum -- 2018-10-26 9:15
 ---------------------------------------------------------------
 Added setters and getters for Character
 Removed testing elements in Main
+Laid foundations for character creation

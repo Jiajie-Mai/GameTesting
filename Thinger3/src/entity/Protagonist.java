@@ -2,7 +2,9 @@ package entity;
 
 import inventory.Item;
 
-import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,7 +17,10 @@ public class Protagonist extends Character {
     String userInput;
     String name;
     String race;
+
     String[] raceList = {"Elf", "Human", "Dwarf", "Amalian"};
+    List<String> raceListArray = Arrays.asList(raceList);
+
     boolean check;
 
     public Protagonist(String nameInput,String classInput){
@@ -60,29 +65,13 @@ public class Protagonist extends Character {
 
         //checks through valid races
         //TODO make this more efficient with contains()
-        switch(userInput){
-            case "human":
-            case "h":
-                break;
-
-            case "elven":
-            case "e":
-                break;
-
-            case "dwarf":
-            case "d":
-                break;
-
-            case "amalian":
-            case "a":
-                break;
-
-            default:
-                System.out.println("Invalid race");
-                setRace();
+        if(raceListArray.contains(userInput.toLowerCase())){
+            confirm(userInput, "race");
         }
-
-        confirm(userInput, "race");
+        else{
+            System.out.println("Invalid race. Please try again.");
+            setRace();
+        }
 
         return race;
     }
@@ -94,6 +83,9 @@ public class Protagonist extends Character {
             case "race":
 
                 //TODO find a way to swap out a for an when the race starts with a vowel
+
+
+
                 System.out.println("You're a " + answer + "?");
 
             case "name":

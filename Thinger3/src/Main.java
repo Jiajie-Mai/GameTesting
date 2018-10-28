@@ -10,6 +10,8 @@ public class Main {
         Protagonist you = new Protagonist("Yote", "fighter");
         Character enemy = new Character("Goblin", 1);
 
+
+
     }
 
 }

@@ -3,6 +3,8 @@
 
 var storyDiv = document.getElementById('storyDiv');
 var choices = document.getElementById('choices');
+var parser = new DOMParser();
+var xmlDoc = parser.parseFromString(text,"resources/text.xml");
 
 function addButtons(name, id) {
   var newButton = document.createElement('input');
@@ -26,6 +28,7 @@ function changeHTML(input, HTMLtext) {
 }
 
 addButtons("Start",'start');
+//storyDiv.textContent += xmlDoc.getElementsByTagName("items")
 
 start.addEventListener('click', function(e){
   begin();
@@ -38,6 +41,7 @@ function begin(){
   addButtons("Cry",'choice2');
   addButtons("Punch",'choice3');
   addButtons("Die",'choice4');
+
 
   choice1.addEventListener('click',function(e){
     clearAll();

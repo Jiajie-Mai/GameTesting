@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speech>
+  <npc>
+    <name>Prison Guard</name>
+    <beginning>
+      <text>Hello there.</text>
+    </beginning>
+  </npc>
+</speech>
+<items>
+  <name>Bread</name>
+  <flavor>Filled with carbohydrates.</flavor>
+  <effect>+10 Hunger</effect>
+</items>
+<items>
+  <name>Unidentified Meat</name>
+  <flavor>It's unidentified meat, but it does taste good.</flavor>
+  <effect>+10 Hunger</effect>
+</items>

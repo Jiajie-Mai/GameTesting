@@ -3,8 +3,6 @@
 
 var storyDiv = document.getElementById('storyDiv');
 var choices = document.getElementById('choices');
-var parser = new DOMParser();
-var xmlDoc = parser.parseFromString(text,"resources/text.xml");
 
 function addButtons(name, id) {
   var newButton = document.createElement('input');
